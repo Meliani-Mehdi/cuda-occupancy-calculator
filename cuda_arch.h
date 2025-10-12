@@ -65,6 +65,8 @@ Gpu_t new_GPU(
 
 void free_GPU(Gpu_t* gpu);
 
+void clear_kernel_blocks(Gpu_t* gpu, Kernel_t* kernel);
+
 void print_GPU_info(Gpu_t* gpu);
 
 void export_GPU_to_HTML(Gpu_t* gpu);
