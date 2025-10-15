@@ -1,0 +1,66 @@
+{
+  "gpus": [
+    {
+      "name": "GPU_Low_resources",
+      "memory_bytes": 4294967296,
+      "shared_mem_per_sm": 49152,
+      "registers_per_sm": 65536,
+      "max_warps_per_sm": 64,
+      "max_blocks_per_sm": 8,
+      "num_sms": 4
+    },
+    {
+      "name": "GPU_mid_resources",
+      "memory_bytes": 8589934592,
+      "shared_mem_per_sm": 98304,
+      "registers_per_sm": 131072,
+      "max_warps_per_sm": 64,
+      "max_blocks_per_sm": 16,
+      "num_sms": 8
+    },
+    {
+      "name": "GPU_high_resources",
+      "memory_bytes": 17179869184,
+      "shared_mem_per_sm": 131072,
+      "registers_per_sm": 256000,
+      "max_warps_per_sm": 64,
+      "max_blocks_per_sm": 32,
+      "num_sms": 16
+    }
+  ],
+
+  "kernels": [
+    {
+      "name": "K1_light",
+      "number_of_blocks": 8,
+      "threads_per_block": 128,
+      "shared_mem_used_in_bytes_per_block": 1024,
+      "registers_per_thread": 32,
+      "stream_id": 1
+    },
+    {
+      "name": "K2_register_heavy",
+      "number_of_blocks": 16,
+      "threads_per_block": 256,
+      "shared_mem_used_in_bytes_per_block": 512,
+      "registers_per_thread": 256,
+      "stream_id": 1
+    },
+    {
+      "name": "K3_sharedmem_heavy",
+      "number_of_blocks": 8,
+      "threads_per_block": 256,
+      "shared_mem_used_in_bytes_per_block": 49152,
+      "registers_per_thread": 64,
+      "stream_id": 1
+    },
+    {
+      "name": "K4_large_threads",
+      "number_of_blocks": 32,
+      "threads_per_block": 512,
+      "shared_mem_used_in_bytes_per_block": 2048,
+      "registers_per_thread": 32,
+      "stream_id": 1
+    }
+  ]
+}

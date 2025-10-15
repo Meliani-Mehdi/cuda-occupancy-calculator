@@ -3,7 +3,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -O2 -g
 
 # Source files
-SRCS = GPU_sim.c cuda_arch.c
+SRCS = GPU_sim.c cuda_arch.c cJSON.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)
@@ -25,6 +25,11 @@ $(TARGET): $(OBJS)
 # Remove compiled files
 clean:
 	rm -f $(OBJS) $(TARGET)
+
+# Remove result files
+clear:
+	rm -rf ./results
+	mkdir results
 
 # Optional: force rebuild
 rebuild: clean all

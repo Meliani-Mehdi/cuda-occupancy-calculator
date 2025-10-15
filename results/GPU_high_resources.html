@@ -3,21 +3,21 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>GPU: MaxGPU</title>
+  <title>GPU: GPU_high_resources</title>
   <link rel='stylesheet' href='../gpu_style.css'>
 </head>
 <body>
-  <h1>GPU: MaxGPU</h1>
+  <h1>GPU: GPU_high_resources</h1>
   <div class='gpu-container'>
-    <div class='gpu-header'>Global Memory: 16.00 GB | SMs: 16 | Shared Mem/SM: 128.00 KB | Registers/SM: 256000</div>
+    <div class='gpu-header'>Global Memory: 2.00 GB | SMs: 16 | Shared Mem/SM: 128.00 KB | Registers/SM: 256000</div>
     <div class='sm-grid'>
       <div class='sm'>
         <h3 class='sm_text'>SM #0</h3>
         <div class='tooltip_sm'>
-          Occupancy: 93.75%<br>
-          Blocks: 5<br>
-          Shared Mem Used: 52.0 KB / 128.0 KB<br>
-          Registers Used: 118.8K / 256.0K
+          Occupancy: 81.25%<br>
+          Blocks: 5 / 32<br>
+          Shared Mem Used: 41.80%<br> 53.5 KB / 128.0 KB<br>
+          Registers Used: 46.40%<br> 118.8K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
@@ -33,15 +33,7 @@
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
@@ -55,7 +47,15 @@
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -65,40 +65,32 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #1</h3>
         <div class='tooltip_sm'>
-          Occupancy: 81.25%<br>
-          Blocks: 4<br>
-          Shared Mem Used: 4.0 KB / 128.0 KB<br>
-          Registers Used: 102.4K / 256.0K
+          Occupancy: 62.50%<br>
+          Blocks: 3 / 32<br>
+          Shared Mem Used: 3.52%<br> 4.5 KB / 128.0 KB<br>
+          Registers Used: 38.40%<br> 98.3K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
             <div class='tooltip'>
-              Kernel: K1_light<br>
-              Threads: 128<br>
-              Shared Mem: 1.0 KB<br>
-              Regs/thread: 32
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -108,10 +100,10 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #2</h3>
         <div class='tooltip_sm'>
-          Occupancy: 93.75%<br>
-          Blocks: 5<br>
-          Shared Mem Used: 52.0 KB / 128.0 KB<br>
-          Registers Used: 118.8K / 256.0K
+          Occupancy: 81.25%<br>
+          Blocks: 5 / 32<br>
+          Shared Mem Used: 41.80%<br> 53.5 KB / 128.0 KB<br>
+          Registers Used: 46.40%<br> 118.8K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
@@ -127,15 +119,7 @@
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
@@ -149,7 +133,15 @@
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -159,40 +151,32 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #3</h3>
         <div class='tooltip_sm'>
-          Occupancy: 81.25%<br>
-          Blocks: 4<br>
-          Shared Mem Used: 4.0 KB / 128.0 KB<br>
-          Registers Used: 102.4K / 256.0K
+          Occupancy: 62.50%<br>
+          Blocks: 3 / 32<br>
+          Shared Mem Used: 3.52%<br> 4.5 KB / 128.0 KB<br>
+          Registers Used: 38.40%<br> 98.3K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
             <div class='tooltip'>
-              Kernel: K1_light<br>
-              Threads: 128<br>
-              Shared Mem: 1.0 KB<br>
-              Regs/thread: 32
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -202,10 +186,10 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #4</h3>
         <div class='tooltip_sm'>
-          Occupancy: 93.75%<br>
-          Blocks: 5<br>
-          Shared Mem Used: 52.0 KB / 128.0 KB<br>
-          Registers Used: 118.8K / 256.0K
+          Occupancy: 81.25%<br>
+          Blocks: 5 / 32<br>
+          Shared Mem Used: 41.80%<br> 53.5 KB / 128.0 KB<br>
+          Registers Used: 46.40%<br> 118.8K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
@@ -221,15 +205,7 @@
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
@@ -243,7 +219,15 @@
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -253,40 +237,32 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #5</h3>
         <div class='tooltip_sm'>
-          Occupancy: 81.25%<br>
-          Blocks: 4<br>
-          Shared Mem Used: 4.0 KB / 128.0 KB<br>
-          Registers Used: 102.4K / 256.0K
+          Occupancy: 62.50%<br>
+          Blocks: 3 / 32<br>
+          Shared Mem Used: 3.52%<br> 4.5 KB / 128.0 KB<br>
+          Registers Used: 38.40%<br> 98.3K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
             <div class='tooltip'>
-              Kernel: K1_light<br>
-              Threads: 128<br>
-              Shared Mem: 1.0 KB<br>
-              Regs/thread: 32
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -296,10 +272,10 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #6</h3>
         <div class='tooltip_sm'>
-          Occupancy: 93.75%<br>
-          Blocks: 5<br>
-          Shared Mem Used: 52.0 KB / 128.0 KB<br>
-          Registers Used: 118.8K / 256.0K
+          Occupancy: 81.25%<br>
+          Blocks: 5 / 32<br>
+          Shared Mem Used: 41.80%<br> 53.5 KB / 128.0 KB<br>
+          Registers Used: 46.40%<br> 118.8K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
@@ -315,15 +291,7 @@
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
@@ -337,7 +305,15 @@
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -347,40 +323,32 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #7</h3>
         <div class='tooltip_sm'>
-          Occupancy: 81.25%<br>
-          Blocks: 4<br>
-          Shared Mem Used: 4.0 KB / 128.0 KB<br>
-          Registers Used: 102.4K / 256.0K
+          Occupancy: 62.50%<br>
+          Blocks: 3 / 32<br>
+          Shared Mem Used: 3.52%<br> 4.5 KB / 128.0 KB<br>
+          Registers Used: 38.40%<br> 98.3K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
             <div class='tooltip'>
-              Kernel: K1_light<br>
-              Threads: 128<br>
-              Shared Mem: 1.0 KB<br>
-              Regs/thread: 32
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -390,10 +358,10 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #8</h3>
         <div class='tooltip_sm'>
-          Occupancy: 93.75%<br>
-          Blocks: 5<br>
-          Shared Mem Used: 52.0 KB / 128.0 KB<br>
-          Registers Used: 118.8K / 256.0K
+          Occupancy: 81.25%<br>
+          Blocks: 5 / 32<br>
+          Shared Mem Used: 41.80%<br> 53.5 KB / 128.0 KB<br>
+          Registers Used: 46.40%<br> 118.8K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
@@ -409,15 +377,7 @@
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
@@ -431,7 +391,15 @@
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -441,40 +409,32 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #9</h3>
         <div class='tooltip_sm'>
-          Occupancy: 81.25%<br>
-          Blocks: 4<br>
-          Shared Mem Used: 4.0 KB / 128.0 KB<br>
-          Registers Used: 102.4K / 256.0K
+          Occupancy: 62.50%<br>
+          Blocks: 3 / 32<br>
+          Shared Mem Used: 3.52%<br> 4.5 KB / 128.0 KB<br>
+          Registers Used: 38.40%<br> 98.3K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
             <div class='tooltip'>
-              Kernel: K1_light<br>
-              Threads: 128<br>
-              Shared Mem: 1.0 KB<br>
-              Regs/thread: 32
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -484,10 +444,10 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #10</h3>
         <div class='tooltip_sm'>
-          Occupancy: 93.75%<br>
-          Blocks: 5<br>
-          Shared Mem Used: 52.0 KB / 128.0 KB<br>
-          Registers Used: 118.8K / 256.0K
+          Occupancy: 81.25%<br>
+          Blocks: 5 / 32<br>
+          Shared Mem Used: 41.80%<br> 53.5 KB / 128.0 KB<br>
+          Registers Used: 46.40%<br> 118.8K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
@@ -503,15 +463,7 @@
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
@@ -525,7 +477,15 @@
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -535,40 +495,32 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #11</h3>
         <div class='tooltip_sm'>
-          Occupancy: 81.25%<br>
-          Blocks: 4<br>
-          Shared Mem Used: 4.0 KB / 128.0 KB<br>
-          Registers Used: 102.4K / 256.0K
+          Occupancy: 62.50%<br>
+          Blocks: 3 / 32<br>
+          Shared Mem Used: 3.52%<br> 4.5 KB / 128.0 KB<br>
+          Registers Used: 38.40%<br> 98.3K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
             <div class='tooltip'>
-              Kernel: K1_light<br>
-              Threads: 128<br>
-              Shared Mem: 1.0 KB<br>
-              Regs/thread: 32
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -578,10 +530,10 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #12</h3>
         <div class='tooltip_sm'>
-          Occupancy: 93.75%<br>
-          Blocks: 5<br>
-          Shared Mem Used: 52.0 KB / 128.0 KB<br>
-          Registers Used: 118.8K / 256.0K
+          Occupancy: 81.25%<br>
+          Blocks: 5 / 32<br>
+          Shared Mem Used: 41.80%<br> 53.5 KB / 128.0 KB<br>
+          Registers Used: 46.40%<br> 118.8K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
@@ -597,15 +549,7 @@
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
@@ -619,7 +563,15 @@
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -629,40 +581,32 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #13</h3>
         <div class='tooltip_sm'>
-          Occupancy: 81.25%<br>
-          Blocks: 4<br>
-          Shared Mem Used: 4.0 KB / 128.0 KB<br>
-          Registers Used: 102.4K / 256.0K
+          Occupancy: 62.50%<br>
+          Blocks: 3 / 32<br>
+          Shared Mem Used: 3.52%<br> 4.5 KB / 128.0 KB<br>
+          Registers Used: 38.40%<br> 98.3K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
             <div class='tooltip'>
-              Kernel: K1_light<br>
-              Threads: 128<br>
-              Shared Mem: 1.0 KB<br>
-              Regs/thread: 32
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -672,10 +616,10 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #14</h3>
         <div class='tooltip_sm'>
-          Occupancy: 93.75%<br>
-          Blocks: 5<br>
-          Shared Mem Used: 52.0 KB / 128.0 KB<br>
-          Registers Used: 118.8K / 256.0K
+          Occupancy: 81.25%<br>
+          Blocks: 5 / 32<br>
+          Shared Mem Used: 41.80%<br> 53.5 KB / 128.0 KB<br>
+          Registers Used: 46.40%<br> 118.8K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
@@ -691,15 +635,7 @@
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
@@ -713,7 +649,15 @@
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -723,40 +667,32 @@
       <div class='sm'>
         <h3 class='sm_text'>SM #15</h3>
         <div class='tooltip_sm'>
-          Occupancy: 81.25%<br>
-          Blocks: 4<br>
-          Shared Mem Used: 4.0 KB / 128.0 KB<br>
-          Registers Used: 102.4K / 256.0K
+          Occupancy: 62.50%<br>
+          Blocks: 3 / 32<br>
+          Shared Mem Used: 3.52%<br> 4.5 KB / 128.0 KB<br>
+          Registers Used: 38.40%<br> 98.3K / 256.0K
         </div>
         <div class='block-container'>
           <div class='block'>
             <div class='tooltip'>
-              Kernel: K1_light<br>
-              Threads: 128<br>
-              Shared Mem: 1.0 KB<br>
-              Regs/thread: 32
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
               Kernel: K2_register_heavy<br>
               Threads: 256<br>
               Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
-            </div>
-          </div>
-          <div class='block'>
-            <div class='tooltip'>
-              Kernel: K2_register_heavy<br>
-              Threads: 256<br>
-              Shared Mem: 0.5 KB<br>
-              Regs/thread: 128
+              Regs/thread: 256
             </div>
           </div>
           <div class='block'>
             <div class='tooltip'>
               Kernel: K4_large_threads<br>
-              Threads: 1024<br>
+              Threads: 512<br>
+              Shared Mem: 2.0 KB<br>
+              Regs/thread: 32
+            </div>
+          </div>
+          <div class='block'>
+            <div class='tooltip'>
+              Kernel: K4_large_threads<br>
+              Threads: 512<br>
               Shared Mem: 2.0 KB<br>
               Regs/thread: 32
             </div>
@@ -765,6 +701,5 @@
       </div>
     </div>
   </div>
-  <footer>Generated by GPU Info Tool</footer>
 </body>
 </html>

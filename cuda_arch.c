@@ -16,17 +16,17 @@
 #endif
 
 Gpu_t new_GPU(
-  const char* name,
-  const unsigned long global_mem_size_in_bytes,
-  const unsigned int shared_mem_size_in_bytes_per_SM,
-  const unsigned int number_of_registers_per_SM,
-  const unsigned short maximum_number_of_warps_per_SM,
-  const unsigned short maximum_number_of_blocks_per_SM,
-  const unsigned short number_of_SMs
+  char* name,
+  unsigned long global_mem_size_in_bytes,
+  unsigned int shared_mem_size_in_bytes_per_SM,
+  unsigned int number_of_registers_per_SM,
+  unsigned short maximum_number_of_warps_per_SM,
+  unsigned short maximum_number_of_blocks_per_SM,
+  unsigned short number_of_SMs
 ){
 
   Gpu_t gpu = {
-    .name = name,
+    .name = strdup(name),
     .global_mem_size_in_bytes = global_mem_size_in_bytes,
     .shared_mem_size_in_bytes_per_SM = shared_mem_size_in_bytes_per_SM,
     .number_of_registers_per_SM = number_of_registers_per_SM,
@@ -256,16 +256,19 @@ void export_GPU_to_HTML(Gpu_t* gpu) {
             "        <h3 class='sm_text'>SM #%d</h3>\n"
             "        <div class='tooltip_sm'>\n"
             "          Occupancy: %.2f%%<br>\n"
-            "          Blocks: %hu<br>\n"
-            "          Shared Mem Used: %.1f KB / %.1f KB<br>\n"
-            "          Registers Used: %.1fK / %.1fK\n"
+            "          Blocks: %hu / %hu<br>\n"
+            "          Shared Mem Used: %.2f%%<br> %.1f KB / %.1f KB<br>\n"
+            "          Registers Used: %.2f%%<br> %.1fK / %.1fK\n"
             "        </div>\n"
             "        <div class='block-container'>\n",
             i,
             occ,
             sm->number_of_blocks,
+            gpu->maximum_number_of_blocks_per_SM,
+            (double)100.0 * total_shared / gpu->shared_mem_size_in_bytes_per_SM,
             (double)total_shared / 1024.0,
             (double)gpu->shared_mem_size_in_bytes_per_SM / 1024.0,
+            (double)100.0 * total_regs / gpu->number_of_registers_per_SM,
             (double)total_regs / 1000.0,
             (double)gpu->number_of_registers_per_SM / 1000.0
             );

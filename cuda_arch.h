@@ -39,28 +39,28 @@ typedef struct SM {
 } SM_t;
 
 typedef struct GPU {
-  const char* name;
+  char* name;
 
-  const unsigned long global_mem_size_in_bytes;
-  const unsigned int shared_mem_size_in_bytes_per_SM;
-  const unsigned int number_of_registers_per_SM;
-  const unsigned short maximum_number_of_warps_per_SM;
-  const unsigned short maximum_number_of_blocks_per_SM;
+  unsigned long global_mem_size_in_bytes;
+  unsigned int shared_mem_size_in_bytes_per_SM;
+  unsigned int number_of_registers_per_SM;
+  unsigned short maximum_number_of_warps_per_SM;
+  unsigned short maximum_number_of_blocks_per_SM;
 
-  const unsigned short number_of_SMs;
+  unsigned short number_of_SMs;
   SM_t* list_of_SMs;
 } Gpu_t;
 
 // ================= Function Declarations ==================
 
 Gpu_t new_GPU(
-  const char* name,
-  const unsigned long global_mem_size_in_bytes,
-  const unsigned int shared_mem_size_in_bytes_per_SM,
-  const unsigned int number_of_registers_per_SM,
-  const unsigned short maximum_number_of_warps_per_SM,
-  const unsigned short maximum_number_of_blocks_per_SM,
-  const unsigned short number_of_SMs
+  char* name,
+  unsigned long global_mem_size_in_bytes,
+  unsigned int shared_mem_size_in_bytes_per_SM,
+  unsigned int number_of_registers_per_SM,
+  unsigned short maximum_number_of_warps_per_SM,
+  unsigned short maximum_number_of_blocks_per_SM,
+  unsigned short number_of_SMs
 );
 
 void free_GPU(Gpu_t* gpu);
