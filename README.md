@@ -122,7 +122,7 @@ All object files will be stored under the `/build` directory.
 
 ---
 
-## 📊 Sample HTML Output Preview
+## Sample HTML Output Preview
 
 Each HTML file contains:
 - GPU details (name, SM count, memory, etc.)
